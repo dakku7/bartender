@@ -9,7 +9,6 @@ SceneManager::SceneManager(AssetManager* assets)
 void SceneManager::pushScene(std::unique_ptr<Scene> scene)
 {
 	pendingActions.push_back({ ActionType::Push, std::move(scene) });
-
 }
 
 void SceneManager::popScene()

@@ -8,7 +8,6 @@ private:
 	//std::vector<std::shared_ptr<Entity>> entities;
 	std::vector<std::shared_ptr<Button>> buttons;
 	std::vector<std::shared_ptr<sf::Text>> text;
-	sf::Text texttemp;
 	sf::Font font;
 
 	sf::View menu_view;
