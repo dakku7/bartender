@@ -2,7 +2,7 @@
 
 Game::Game()
 	: window(sf::VideoMode(WIDTH, HEIGHT), "Bartender", sf::Style::Default),
-	scene_manager(&asset_manager)
+	scene_manager(&asset_manager, &window)
 {
 	scene_manager.pushScene(std::make_unique<MenuScene>(&asset_manager, &scene_manager));
 }

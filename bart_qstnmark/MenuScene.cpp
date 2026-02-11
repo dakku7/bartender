@@ -19,7 +19,7 @@ void MenuScene::init()
 void MenuScene::initEntities()
 {
 	ass_mgr->loadTexture(TextureID::Menu_Button);
-	font.loadFromFile("D:\\visualcode\\bart_qstnmark\\bart_qstnmark\\font\\menu.otf");
+	font.loadFromFile("font\\menu.otf");
 
 	std::string fill[3] = { "PLAY", "OPTIONS", "QUIT" };
 
@@ -49,6 +49,10 @@ void MenuScene::initEntities()
 		scene_mgr->pushScene(
 			std::make_unique<OptionsScene>(ass_mgr, scene_mgr));
 		});
+	buttons[2]->setCallback([this]() {
+		this->scene_mgr->getWindow()->close();
+		});
+	
 }
 
 void MenuScene::handleEvent(sf::Event ev, sf::RenderWindow& window)
