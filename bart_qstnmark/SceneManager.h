@@ -33,6 +33,7 @@ public:
 	void popScene();
 	void replaceScene(std::unique_ptr<Scene> scene);
 	void applyPendingChanges();
+	void setWindowSize(int x, int y);
 
 	void handleEvents(sf::Event& ev, sf::RenderWindow& window);
 	void update(float dt);

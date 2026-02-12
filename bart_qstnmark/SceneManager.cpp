@@ -107,3 +107,7 @@ sf::RenderWindow* SceneManager::getWindow()
 {
 	return window;
 }
+
+void SceneManager::setWindowSize(int x,int y) {
+	window->setSize(sf::Vector2u(x,y));
+}
