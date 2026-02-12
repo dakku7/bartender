@@ -23,10 +23,11 @@ class SceneManager
 private:
 	std::vector<std::unique_ptr<Scene>> scenes;
 	AssetManager* ass_mgr;
+	sf::RenderWindow* window;
 	std::vector<PendingAction> pendingActions;
 
 public:
-	SceneManager(AssetManager* assets);
+	SceneManager(AssetManager* assets, sf::RenderWindow* window);
 
 	void pushScene(std::unique_ptr<Scene> scene);
 	void popScene();
@@ -37,5 +38,6 @@ public:
 	void update(float dt);
 	void render(sf::RenderTarget* target);
 	Scene* getCurrentScene();
+	sf::RenderWindow* getWindow();
 };
 

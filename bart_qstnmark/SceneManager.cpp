@@ -1,7 +1,7 @@
 #include "SceneManager.h"
 
-SceneManager::SceneManager(AssetManager* assets)
-	: ass_mgr(assets)
+SceneManager::SceneManager(AssetManager* assets, sf::RenderWindow* window)
+	: ass_mgr(assets), window(window)
 {
 }
 
@@ -101,4 +101,9 @@ void SceneManager::render(sf::RenderTarget* target)
 Scene* SceneManager::getCurrentScene()
 {
 	return scenes.back().get();
+}
+
+sf::RenderWindow* SceneManager::getWindow()
+{
+	return window;
 }
