@@ -6,9 +6,17 @@ enum class TextureID {
 	Menu_Backgorund,
 	Menu_Button,
 	Menu_Button_Lightened,
-	Game_Background, 
+	Game_Background,
+  Game_Background, 
 	Game_Grid,
 	Bar,
+
+  //options
+	Options_Background,
+	Options_Arrow_Right,
+	Options_Arrow_Left,
+	Options_Arrow_Right_Lightened,
+	Options_Arrow_Left_Lightened,
 
 	//main char
 	Main_Char_Default,

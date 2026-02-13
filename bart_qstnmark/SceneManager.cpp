@@ -107,3 +107,11 @@ sf::RenderWindow* SceneManager::getWindow()
 {
 	return window;
 }
+// ц€ хуйн€ на половину працюЇ
+void SceneManager::setWindowSize(int x,int y) {
+	window->setSize(sf::Vector2u(x,y)); // м≥н€Ї розм≥р окна
+	sf::View view(sf::FloatRect(0, 0, x, y));//маЇ м≥н€ть видж окна,но шось не бум бум
+	window->setView(view);
+}
+
+

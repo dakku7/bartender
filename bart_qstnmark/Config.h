@@ -1,9 +1,9 @@
 #pragma once
 
-//всякие статик переменные для конфигурации проекта, стейтменты и разрешение экрана etc.
+//ГўГ±ГїГЄГЁГҐ Г±ГІГ ГІГЁГЄ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ Г¤Г«Гї ГЄГ®Г­ГґГЁГЈГіГ°Г Г¶ГЁГЁ ГЇГ°Г®ГҐГЄГІГ , Г±ГІГҐГ©ГІГ¬ГҐГ­ГІГ» ГЁ Г°Г Г§Г°ГҐГёГҐГ­ГЁГҐ ГЅГЄГ°Г Г­Г  etc.
 
 static const float WIDTH = 1280;
-static const float HEIGHT = 720;
+static const float HEIGHT = 720; 
 
 static const float TILE_SIZE = 113;
 //bar edge || interact zone with customers

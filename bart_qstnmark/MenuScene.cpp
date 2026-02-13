@@ -52,6 +52,7 @@ void MenuScene::initEntities()
 		scene_mgr->pushScene(
 			std::make_unique<OptionsScene>(ass_mgr, scene_mgr));
 		});
+	//quit
 	buttons[2]->setCallback([this]() {
 		this->scene_mgr->getWindow()->close();
 		});
