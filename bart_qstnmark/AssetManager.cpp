@@ -33,6 +33,16 @@ std::string AssetManager::getPath(TextureID id)
         return "img\\menu\\button_light.png";
     case TextureID::Game_Background:
         return "img\\game\\background.png";
+    case TextureID::Main_Char_Default:
+        return "img\\game\\mainchar\\main_char.png";
+    case TextureID::Game_Grid:
+        return "img\\game\\grid.png";
+    case TextureID::Bar:
+        return "img\\game\\mainchar\\bar.png";
+    case TextureID::Customer_Default:
+        return "img\\game\\customer\\customer.png";
+    case TextureID::Customer_Interact_Icon:
+        return "img\\game\\customer\\interact.png";
     }
     return "";
 }

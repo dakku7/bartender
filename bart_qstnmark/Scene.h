@@ -18,7 +18,7 @@ public:
 
 	virtual ~Scene() = default;
 	
-	virtual void handleEvent(sf::Event ev, sf::RenderWindow& window) = 0;
+	virtual void handleEvent(sf::Event& ev, sf::RenderWindow& window) = 0;
 	virtual void update(float dt) = 0;
 	virtual void render(sf::RenderTarget* target) = 0;
 	virtual sf::View& getView() = 0;

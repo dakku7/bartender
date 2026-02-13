@@ -1,8 +1,16 @@
 #pragma once
 
-//всякие статик переменные для конфигурации проекта, стейтменты и разрешение экрана etc.
+//ГўГ±ГїГЄГЁГҐ Г±ГІГ ГІГЁГЄ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ Г¤Г«Гї ГЄГ®Г­ГґГЁГЈГіГ°Г Г¶ГЁГЁ ГЇГ°Г®ГҐГЄГІГ , Г±ГІГҐГ©ГІГ¬ГҐГ­ГІГ» ГЁ Г°Г Г§Г°ГҐГёГҐГ­ГЁГҐ ГЅГЄГ°Г Г­Г  etc.
 
 static const float WIDTH = 1280;
 static const float HEIGHT = 720; 
 
- 
+static const float TILE_SIZE = 113;
+//bar edge || interact zone with customers
+// 113 - 1 tile * 3 tiles
+static const float INTERACT_ZONE_X = TILE_SIZE * 3;
+static const float INTERACT_ZONE_Y = TILE_SIZE * 2;
+
+static const float ENTRANCE_ZONE_X = TILE_SIZE * 8;
+static const float ENTRANCE_ZONE_Y = TILE_SIZE * 2;
+

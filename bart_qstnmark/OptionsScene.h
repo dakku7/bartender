@@ -23,7 +23,7 @@ public:
 	void init();
 	void initEntities();
 
-	void handleEvent(sf::Event ev, sf::RenderWindow& window) override;
+	void handleEvent(sf::Event& ev, sf::RenderWindow& window) override;
 	void update(float dt) override;
 	void render(sf::RenderTarget* target) override;
 
