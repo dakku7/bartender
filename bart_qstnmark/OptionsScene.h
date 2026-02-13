@@ -12,7 +12,7 @@ private:
 public:
 	OptionsScene(AssetManager* assmgr, SceneManager* scenemgr);
 
-	void handleEvent(sf::Event ev, sf::RenderWindow& window) override;
+	void handleEvent(sf::Event& ev, sf::RenderWindow& window) override;
 	void update(float dt) override;
 	void render(sf::RenderTarget* target) override;
 

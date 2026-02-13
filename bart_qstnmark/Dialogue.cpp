@@ -5,13 +5,18 @@ Dialogue::Dialogue(AssetManager* assmgr, SceneManager* scenemgr)
 {
 }
 
-void Dialogue::handleEvent(sf::Event ev, sf::RenderWindow& window)
+void Dialogue::handleEvent(sf::Event& ev, sf::RenderWindow& window)
 {
-	switch (ev.type)
-	{
-	default:
-		break;
-	}
+    switch (ev.type)
+    {
+    case sf::Event::KeyPressed:
+        if (ev.key.code == sf::Keyboard::Space)
+            nextLine();
+        break;
+
+    default:
+        break;
+    }
 }
 
 void Dialogue::update(float dt) 
@@ -22,4 +27,8 @@ void Dialogue::update(float dt)
 void Dialogue::render(sf::RenderTarget* target) 
 {
 
+}
+
+void Dialogue::nextLine()
+{
 }

@@ -13,7 +13,7 @@ private:
 
 private:
 	void processEvents();
-	void update();
+	void update(float dt);
 	void render();
 
 public:
