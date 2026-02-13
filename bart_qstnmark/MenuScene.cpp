@@ -3,7 +3,7 @@
 #include "SceneManager.h"
 
 MenuScene::MenuScene(AssetManager* assmgr, SceneManager* scenemgr)
-	: Scene(assmgr, scenemgr), menu_view(sf::FloatRect(sf::Vector2f(0,0), sf::Vector2f(WIDTH, HEIGHT)))
+	: Scene(assmgr, scenemgr), menu_view(sf::FloatRect(0, 0, 1280, 720))
 {
 	init();
 	initEntities();
@@ -14,6 +14,9 @@ void MenuScene::init()
 	ass_mgr->loadTexture(TextureID::Menu_Backgorund);
 	background.setTexture(ass_mgr->getTexture(TextureID::Menu_Backgorund));
 	background.setPosition(0, 0);
+
+	kubik_tex.loadFromFile("img\\game\\mainchar\\test.png");
+	kubik.setTexture(kubik_tex);
 }
 
 void MenuScene::initEntities()
@@ -55,7 +58,7 @@ void MenuScene::initEntities()
 	
 }
 
-void MenuScene::handleEvent(sf::Event ev, sf::RenderWindow& window)
+void MenuScene::handleEvent(sf::Event& ev, sf::RenderWindow& window)
 {
 	sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 
@@ -89,8 +92,6 @@ void MenuScene::handleEvent(sf::Event ev, sf::RenderWindow& window)
 
 void MenuScene::update(float dt)
 {
-
-
 	
 }
 
@@ -106,4 +107,5 @@ void MenuScene::render(sf::RenderTarget* target)
 	{
 		target->draw(*it.get());
 	}
+	target->draw(kubik);
 }

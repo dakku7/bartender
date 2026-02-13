@@ -5,7 +5,7 @@ OptionsScene::OptionsScene(AssetManager* assmgr, SceneManager* scenemgr)
 {
 }
 
-void OptionsScene::handleEvent(sf::Event ev, sf::RenderWindow& window)
+void OptionsScene::handleEvent(sf::Event& ev, sf::RenderWindow& window)
 {
 	switch (ev.type)
 	{

@@ -6,7 +6,16 @@ enum class TextureID {
 	Menu_Backgorund,
 	Menu_Button,
 	Menu_Button_Lightened,
-	Game_Background,
+	Game_Background, 
+	Game_Grid,
+	Bar,
+
+	//main char
+	Main_Char_Default,
+	
+	//customers
+	Customer_Default,
+	Customer_Interact_Icon
 };
 
 class AssetManager
