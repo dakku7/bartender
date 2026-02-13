@@ -6,6 +6,7 @@
 VolumeManager::VolumeManager()
 {
 }
+float VolumeManager::masterVolume = 100.f;
 void VolumeManager::setMasterVolume(float volume)
 {
     masterVolume = std::clamp(volume, 0.f, 100.f);
