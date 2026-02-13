@@ -40,5 +40,6 @@ public:
 	void render(sf::RenderTarget* target);
 	Scene* getCurrentScene();
 	sf::RenderWindow* getWindow();
+
 };
 

@@ -2,6 +2,7 @@
 #include "Config.h"
 #include "MenuScene.h"
 #include "SceneManager.h"
+#include "VolumeManager.h"
 
 OptionsScene::OptionsScene(AssetManager* assmgr, SceneManager* scenemgr)
 	: Scene(assmgr, scenemgr), options_view(sf::FloatRect(sf::Vector2f(0, 0), sf::Vector2f(WIDTH, HEIGHT)))
@@ -59,8 +60,10 @@ void OptionsScene::initEntities() {
 		});
 	//volume
 	buttons[2]->setCallback([this]() {
+		scaleMasterVolume(-5);
 		});
 	buttons[3]->setCallback([this]() {
+		scaleMasterVolume(5);
 		});
 	//quit
 	buttons[4]->setCallback([this]() {
@@ -126,5 +129,8 @@ void OptionsScene::scaleResolution(int i) {
 	else if (res < 0) res = 7;
 	scene_mgr->setWindowSize(resolution_x[res], resolution_y[res]);
 };
-void OptionsScene::scaleVolume(int i) {};
+void OptionsScene::scaleMasterVolume(float i) {
+	if (VolumeManager::getMasterVolume() + i > 100 || VolumeManager::getMasterVolume() + i < 0) {};
+	VolumeManager::setMasterVolume(VolumeManager::getMasterVolume() + i);
+};
 void OptionsScene::enterCodes() {};

@@ -16,7 +16,7 @@ private:
 private:
 	//func
 	void scaleResolution(int i);
-	void scaleVolume(int i);
+	void scaleMasterVolume(float i);
 	void enterCodes();
 public:
 	OptionsScene(AssetManager* assmgr, SceneManager* scenemgr);
@@ -32,4 +32,3 @@ public:
 
 	sf::View& getView() override { return options_view; }
 };
-
