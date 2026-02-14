@@ -71,7 +71,7 @@ void OptionsScene::initEntities() {
 		});
 };
 
-void OptionsScene::handleEvent(sf::Event ev, sf::RenderWindow& window)
+void OptionsScene::handleEvent(sf::Event& ev, sf::RenderWindow& window)
 {
 	sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
 
