@@ -16,8 +16,8 @@ enum class TextureID {
 	Options_Arrow_Left,
 	Options_Arrow_Right_Lightened,
 	Options_Arrow_Left_Lightened,
-
 	//main char
+
 	Main_Char_Default,
 	
 	//customers
