@@ -7,7 +7,6 @@ enum class TextureID {
 	Menu_Button,
 	Menu_Button_Lightened,
 	Game_Background,
-  Game_Background, 
 	Game_Grid,
 	Bar,
 
@@ -23,7 +22,9 @@ enum class TextureID {
 	
 	//customers
 	Customer_Default,
-	Customer_Interact_Icon
+	Customer_Interact_Icon,
+
+	Dialogue_Bar
 };
 
 class AssetManager

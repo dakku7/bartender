@@ -38,7 +38,8 @@ public:
 	void waitForInteraction();
 	void drinkOrder();
 	void leaving();
-
+	std::vector<std::string> getDialogue();
+	void setCustomerStatus(CustomerState status);
 
 	sf::Vector2f getPosition() const override;
 	sf::Sprite& getSprite() { return sprite; }
