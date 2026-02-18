@@ -4,6 +4,7 @@
 #include "Dialogue.h"
 #include "Customer.h"
 #include "Object.h"
+#include "SceneManager.h"
 
 enum class GameState {
 	Free,
@@ -30,10 +31,6 @@ private:
 	sf::Texture kubik_tex; //delete
 	sf::Sprite grid; //delete
 
-
-
-	Dialogue dialogue_tool; 
-
 	//MixTooll - надо сделать будет класс в котором будет минисекция 
 	//делания коктелей и тому подобного, брать референс с va-11 hall-a игры
 private:
@@ -43,6 +40,8 @@ private:
 public:
 	GameScene(AssetManager* assmgr, SceneManager* scenemgr);
 	void init();
+
+	void spawnCustomer();
 
 	void handleEvent(sf::Event& ev, sf::RenderWindow& window) override;
 	void handleCustomers();

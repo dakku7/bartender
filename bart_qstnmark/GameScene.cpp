@@ -4,7 +4,7 @@
 #include <iostream>
 
 GameScene::GameScene(AssetManager* assmgr, SceneManager* scenemgr)
-	: Scene(assmgr, scenemgr), dialogue_tool(assmgr, scenemgr), world_view(sf::Vector2f(WIDTH / 2, HEIGHT / 2), sf::Vector2f(WIDTH, HEIGHT))
+	: Scene(assmgr, scenemgr),  world_view(sf::Vector2f(WIDTH / 2, HEIGHT / 2), sf::Vector2f(WIDTH, HEIGHT))
 {
 	init();
 }
@@ -32,9 +32,7 @@ void GameScene::init()
 	
 
 	//customer
-	std::shared_ptr<Customer> customer = std::make_shared<Customer>(ass_mgr, "Test", Mood::Calm);
-	customer->init();
-	customers.push_back(std::move(customer));
+	spawnCustomer();
 
 	//bar init
 	ass_mgr->loadTexture(TextureID::Bar);
@@ -44,6 +42,13 @@ void GameScene::init()
 	objects.push_back(std::move(bar));
 }
 
+void GameScene::spawnCustomer()
+{
+	std::shared_ptr<Customer> customer = std::make_shared<Customer>(ass_mgr, "Test", Mood::Calm);
+	customer->init();
+	customers.push_back(std::move(customer));
+}
+
 
 void GameScene::handleEvent(sf::Event& ev, sf::RenderWindow& window)
 {
@@ -51,9 +56,6 @@ void GameScene::handleEvent(sf::Event& ev, sf::RenderWindow& window)
 	{
 	case GameState::Free:
 		handleFreeModeEvent(ev);
-		break;
-	case GameState::Dialogue:
-		dialogue_tool.handleEvent(ev, window);
 		break;
 	case GameState::MixGame:
 		//mix_tool.hanldeEvent(ev);
@@ -103,7 +105,7 @@ void GameScene::render(sf::RenderTarget* target)
 	}
 
 	
-	//target->draw(grid);
+	target->draw(grid);
 	//target->draw(kubik);
 	//player empty exception
 	
@@ -116,7 +118,8 @@ GameState GameScene::getGameStateMode()
 
 void GameScene::handleFreeModeEvent(sf::Event& ev)
 {
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) {
+	if (ev.type == sf::Event::KeyPressed &&
+		ev.key.code == sf::Keyboard::E) {
 		startDialogue();
 	}
 
@@ -138,10 +141,10 @@ void GameScene::startDialogue()
 
 		if (distance < 113.f * 3) // радиус взаимодействия
 		{
-			mode = GameState::Dialogue;
-
-			std::cout << "\n DIALOUGE STARTED\n";
-			//dialogue_tool.start(customer);
+			//mode = GameState::Dialogue;
+			customer->setCustomerStatus(CustomerState::InDialogue);
+			//std::cout << "\n DIALOUGE STARTED\n";
+			this->scene_mgr->pushScene(std::make_unique<Dialogue>(ass_mgr, scene_mgr, customer));
 			return;
 		}
 	}

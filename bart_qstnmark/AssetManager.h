@@ -22,7 +22,9 @@ enum class TextureID {
 	
 	//customers
 	Customer_Default,
-	Customer_Interact_Icon
+	Customer_Interact_Icon,
+
+	Dialogue_Bar
 };
 
 class AssetManager

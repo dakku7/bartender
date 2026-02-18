@@ -43,6 +43,8 @@ std::string AssetManager::getPath(TextureID id)
         return "img\\game\\customer\\customer.png";
     case TextureID::Customer_Interact_Icon:
         return "img\\game\\customer\\interact.png";
+    case TextureID::Dialogue_Bar:
+        return "img\\game\\dialogue_box.png";
     }
     return "";
 }

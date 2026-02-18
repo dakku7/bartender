@@ -143,6 +143,10 @@ void OptionsScene::handleEvent(sf::Event& ev, sf::RenderWindow& window)
 		break;
 	}
 
+}
+
+void OptionsScene::update(float dt)
+{  
 	for (auto& it : buttons)
 	{
 		if (it->contains(mousePos)) {
@@ -152,10 +156,6 @@ void OptionsScene::handleEvent(sf::Event& ev, sf::RenderWindow& window)
 			it->setHovered(false);
 		}
 	}
-}
-
-void OptionsScene::update(float dt)
-{
 }
 
 void OptionsScene::render(sf::RenderTarget* target)
@@ -183,7 +183,10 @@ void OptionsScene::scaleMasterVolume(float i) {
 	if (VolumeManager::getMasterVolume() + i > 100 || VolumeManager::getMasterVolume() + i < 0) {};
 	VolumeManager::setMasterVolume(VolumeManager::getMasterVolume() + i);
 };
-void OptionsScene::enterCodes() {}
+
+void OptionsScene::enterCodes() {
+}
+
 void OptionsScene::showVolume(std::shared_ptr<sf::Text> vol_show_text)
 {
 	vol_show_text->setString(std::to_string(VolumeManager::getMasterVolume()));

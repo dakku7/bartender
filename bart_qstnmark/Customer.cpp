@@ -93,6 +93,20 @@ void Customer::waitForInteraction()
 
 }
 
+std::vector<std::string> Customer::getDialogue()
+{
+	return {
+		"Good evening.",
+		"I'd like something strong.",
+		"Surprise me."
+	};
+}
+
+void Customer::setCustomerStatus(CustomerState status)
+{
+	this->state = status;
+}
+
 sf::Vector2f Customer::getPosition() const
 {
 	return sprite.getPosition();
