@@ -141,18 +141,22 @@
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="Customer.cpp" />
     <ClCompile Include="Dialogue.cpp" />
+    <ClCompile Include="Drinks.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="MenuScene.cpp" />
+    <ClCompile Include="MiniGame.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="OptionsScene.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="VolumeManager.cpp" />
+    <ClCompile Include="Whisky.cpp" />
+    <ClCompile Include="Wodka.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
@@ -163,17 +167,21 @@
     <ClInclude Include="Config.h" />
     <ClInclude Include="Customer.h" />
     <ClInclude Include="Dialogue.h" />
+    <ClInclude Include="Drinks.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="HUD.h" />
     <ClInclude Include="MenuScene.h" />
+    <ClInclude Include="MiniGame.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="OptionsScene.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="VolumeManager.h" />
+    <ClInclude Include="Whisky.h" />
+    <ClInclude Include="Wodka.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
