@@ -11,3 +11,10 @@ int MiniGame::makeDrink(Drinks& first, Drinks& second) // логіка приготування на
 {
 	return first.getID() + second.getID() + this->ice;
 }
+
+int MiniGame::makeSoloDrink(Drinks& first) // логіка соло напітків
+{
+	return first.getID() + this->ice;
+}
+
+

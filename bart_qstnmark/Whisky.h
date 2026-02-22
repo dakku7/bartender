@@ -1,6 +1,6 @@
 #pragma once
 #include "Drinks.h"
-class Whisky : Drinks
+class Whisky :public Drinks
 {
 public:
 	Whisky();

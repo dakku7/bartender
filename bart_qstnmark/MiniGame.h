@@ -6,6 +6,7 @@ public:
 	int ice;
 	void addIce();
 	int makeDrink(Drinks& first, Drinks& second);
+	int makeSoloDrink(Drinks& first);
 };
 
 	
